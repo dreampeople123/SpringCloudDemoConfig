@@ -27,4 +27,4 @@ management:
     web:
       exposure:
         include: bus-refresh
-foo: 4
+foo: 5
