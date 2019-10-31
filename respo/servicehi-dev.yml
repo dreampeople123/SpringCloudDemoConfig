@@ -3,6 +3,16 @@ server:
 spring:
   application:
     name: servicehi
+  cloud:
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 eureka:
   client: #客户端注册进eureka服务列表内
     serviceUrl:
@@ -14,3 +24,8 @@ info:
   company.name: www.ze.com
   build.artifactId: servicehi
   build.version: 0.0.1
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
