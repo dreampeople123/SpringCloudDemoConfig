@@ -26,5 +26,8 @@ management:
   endpoints:
     web:
       exposure:
-        include: bus-refresh
+        include: "*"
+      cors:
+        allowed-origins: "*"
+        allowed-methods: "*"
 foo: 5
